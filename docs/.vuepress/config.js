@@ -22,7 +22,7 @@ module.exports = {
         children: [
           {
             text: "Add users",
-            link: "/users/#add-users",
+            link: "/users/add",
           },
           {
             text: "Profile",
