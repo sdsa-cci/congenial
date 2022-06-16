@@ -1,0 +1,19 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "export": "vuepress --debug export docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.48"
+  },
+  "dependencies": {
+    "vuepress-plugin-copy-code2": "2.0.0-beta.82"
+  }
+}
