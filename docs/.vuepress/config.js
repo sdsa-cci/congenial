@@ -3,6 +3,7 @@ const { copyCodePlugin } = require("vuepress-plugin-copy-code2");
 
 module.exports = {
   port: 3000,
+  base: '/congenial/',
   title: "TPNRD APIs",
   description: "New TPNRD SAM Application",
   plugins: [copyCodePlugin(), '@snowdog/vuepress-plugin-pdf-export'],
