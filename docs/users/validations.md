@@ -6,6 +6,12 @@
 POST {{server_url}}/validations
 ```
 
+### :eight_spoked_asterisk: Stored Procedure
+
+<div class="custom-container tip">
+<p>usp_validate_user</p>
+</div>
+
 ### Request
 
 ```json
@@ -32,12 +38,13 @@ POST {{server_url}}/validations
 ### Response - 400
 
 <CodeGroup>
-<CodeGroupItem title="Invalid Signup Code" active>
+<CodeGroupItem title="Existing Email" active>
 
 ```json
 {
-  "message": "Sign-up code is not valid.",
-  "code": 400
+  "message": "User with email ${data.user_email} already exists in cognito.",
+  "code": 400,
+  "message_code": 0
 }
 ```
 
@@ -47,6 +54,17 @@ POST {{server_url}}/validations
 ```json
 {
   "message": "Mobile phone number is already registered.",
+  "code": 400,
+  "message_code": 0
+}
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Invalid Signup Code">
+
+```json
+{
+  "message": "Sign-up code is not valid.",
   "code": 400,
   "message_code": 0
 }

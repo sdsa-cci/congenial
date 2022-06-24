@@ -1,0 +1,11 @@
+.custom-container.tip {
+  border-color: var(--c-tip);
+  background-color: var(--c-tip-bg);
+  color: var(--c-tip-text);
+}
+
+.custom-container.warning {
+  border-color: var(--c-warning);
+  background-color: var(--c-warning-bg);
+  color: var(--c-warning-text);
+}

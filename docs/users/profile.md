@@ -6,6 +6,12 @@
 GET {{server_url}}/users/profile
 ```
 
+### :eight_spoked_asterisk: Stored Procedure
+
+<div class="custom-container tip">
+<p>usp_get_user_details</p>
+</div>
+
 ### Response - 200
 
 ```json

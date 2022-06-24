@@ -6,6 +6,12 @@
 POST {{server_url}}/users
 ```
 
+### :eight_spoked_asterisk: Stored Procedure
+
+<div class="custom-container tip">
+<p>usp_add_user</p>
+</div>
+
 ### Request
 
 ```json
@@ -42,29 +48,57 @@ POST {{server_url}}/users
 ```json
 {
   "message": "The User is created successfully.",
-  "code": 200
+  "code": 200,
+  "message_code": 0
 }
 ```
 
 ### Response - 400
+
 <CodeGroup>
-<CodeGroupItem title="Missing Fields" active>
+<CodeGroupItem title="Empty fields" active>
 
 ```json
 {
   "message": "Empty fields.",
-  "code": 400
+  "code": 400,
+  "message_code": 0
 }
 ```
+
 </CodeGroupItem>
-<CodeGroupItem title="Existing User">
+<CodeGroupItem title="Invalid Code">
+
+```json
+{
+  "message": "Sign-up code is not valid.",
+  "code": 400,
+  "message_code": "MC004"
+}
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Existing Phone" active>
+
+```json
+{
+  "message": "Mobile phone number is already registered.",
+  "code": 400,
+  "message_code": 0
+}
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Existing Email">
 
 ```json
 {
   "message": "User with email ${userData.user_email} already exists in cognito.",
-  "code": 400
+  "code": 400,
+  "message_code": 0
 }
 ```
+
 </CodeGroupItem>
 <CodeGroupItem title="Duplicate Entites">
 
@@ -74,5 +108,6 @@ POST {{server_url}}/users
   "code": 400
 }
 ```
+
 </CodeGroupItem>
 </CodeGroup>

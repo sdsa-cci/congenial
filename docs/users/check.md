@@ -1,10 +1,16 @@
-# User existence
+# User exists
 
 ### URL
 
 ```:no-line-numbers
 GET {{server_url}}/users/{{user_email}}
 ```
+
+### :eight_spoked_asterisk: Stored Function
+
+<div class="custom-container warning">
+<p>___uf_user_exists</p>
+</div>
 
 ### Response - 200
 
@@ -23,7 +29,8 @@ GET {{server_url}}/users/{{user_email}}
 ```json
 {
     "message": "Email-id is not present in the database.",
-    "code": 400
+    "code": 400,
+    "message_code": 0
 }
 ```
 </CodeGroupItem>

@@ -6,6 +6,12 @@
 PUT {{server_url}}/users
 ```
 
+### :eight_spoked_asterisk: Stored Procedure
+
+<div class="custom-container tip">
+<p>usp_update_user_profile</p>
+</div>
+
 ### Request
 
 ```json
@@ -37,7 +43,8 @@ PUT {{server_url}}/users
 ```json
 {
   "message": "The User profile updated successfully.",
-  "code": 200
+  "code": 200,
+  "message_code": 0
 }
 ```
 
@@ -49,7 +56,8 @@ PUT {{server_url}}/users
 ```json
 {
   "message": "Empty fields.",
-  "code": 400
+  "code": 400,
+  "message_code": 0
 }
 ```
 
@@ -59,7 +67,8 @@ PUT {{server_url}}/users
 ```json
 {
   "message": "Email-id is not present in the database.",
-  "code": 400
+  "code": 400,
+  "message_code": 0
 }
 ```
 
