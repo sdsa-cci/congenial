@@ -16,52 +16,31 @@ POST {{server_url}}/fields/farm-practices
 
 ```json
 {
-  "field_id": 2771,
-  "irrig_unit_id": "TP0281",
-  "farm_practices": [
+  "message": "Farm practices updated successfully.",
+  "data": [
     {
-      "acres": "100.00",
-      "crop": "Alfalfa",
-      "tillage": "CTill",
-      "deleted": false
+      "id": 3126,
+      "created": "2022-03-30T07:30:40.065873+00:00",
+      "updated": "2022-03-30T07:30:40.065873+00:00",
+      "deleted": false,
+      "user_field_id": 1257,
+      "acres": 50,
+      "year": 2022,
+      "tillage": "MTill",
+      "crop": "Corn"
+    },
+    {
+      "id": 3130,
+      "created": "2022-03-30T10:19:50.645634+00:00",
+      "updated": "2022-03-30T10:26:04.21433+00:00",
+      "deleted": false,
+      "user_field_id": 1257,
+      "acres": 60,
+      "year": 2022,
+      "tillage": "MTill",
+      "crop": "Soybeans"
     }
   ],
-  "year": 2022
-}
-```
-
-### Response - 200
-
-```json
-{
-  "message": "Fetched farm practices successfully.",
-  "data": {
-    "crops": [
-      {
-        "crop_name": "Corn"
-      },
-      {
-        "crop_name": "Soybeans"
-      },
-      {
-        "crop_name": "Alfalfa"
-      }
-    ],
-    "tillages": [
-      {
-        "tillage_name": "CTill"
-      },
-      {
-        "tillage_name": "MTill"
-      },
-      {
-        "tillage_name": "NTill"
-      },
-      {
-        "tillage_name": "STill"
-      }
-    ]
-  },
   "code": 200,
   "message_code": 0
 }
