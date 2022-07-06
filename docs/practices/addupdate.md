@@ -16,6 +16,24 @@ POST {{server_url}}/fields/farm-practices
 
 ```json
 {
+  "field_id": 2771,
+  "irrig_unit_id": "TP0281",
+  "farm_practices": [
+    {
+      "acres": "100.00",
+      "crop": "Alfalfa",
+      "tillage": "CTill",
+      "deleted": false
+    }
+  ],
+  "year": 2022
+}
+```
+
+### Response - 200
+
+```json
+{
   "message": "Farm practices updated successfully.",
   "data": [
     {
